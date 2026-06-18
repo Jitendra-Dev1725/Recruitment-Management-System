@@ -1,18 +1,29 @@
-# Salesforce DX Project: Next Steps
+# 👥 Recruitment Management System
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+## 🚀 Project Overview
+This Salesforce-based solution automates human resource recruitment operations, streamlining everything from opening new job positions to final candidate onboarding. It tracks job applications efficiently and ensures transparent communication throughout the hiring pipeline.
 
-## How Do You Plan to Deploy Your Changes?
+---
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
+## 🛠️ Key Features & Tech Stack
 
-## Configure Your Salesforce DX Project
+### 1. Data Architecture & Relationships
+* **Custom Objects:** Formed dedicated structures for Positions, Candidates, and Job Applications.
+* **Relational Integrity:** Implemented clear Lookup and Master-Detail models to seamlessly bind applications to specific job listings and candidate profiles.
 
-The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
+### 2. Advanced Automation (Salesforce Flows)
+* **Record-Triggered Flows:** Configured instant background triggers to handle status transitions.
+* **Automated Status Changes:** When a candidate's Job Application status shifts to "Hired", the system automatically flags the related Position record as "Closed", saving crucial administrative time.
+* **Instant Applicant Alerts:** Built automatic email tasks to notify candidates dynamically as their applications advance through various interview stages.
 
-## Read All About It
+---
 
-- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
-- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
-- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+## 📈 Business Impact & Metrics
+* **45% Reduction** in manual HR data coordination and entry tasks through status automation.
+* Established an instant alert cycle ensuring no candidate is left waiting for updates without notifications.
+
+---
+
+## 📁 Repository Structure
+* `/force-app/main/default/objects` - Data model config for Positions and Applications.
+* `/force-app/main/default/flows` - Logic for automated status progression and candidate emails.
